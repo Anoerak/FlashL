@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+	{{controller_name}}
+{% endblock %}
+
+{% block body %}
+	<h1>Welcome to the Home Page</h1>
+	{# We display the informations about the user #}
+	<p>
+		You are logged in as
+		{{ user.email }}.
+		<br/>
+		Your roles are
+		{% for role in user.roles %}
+			{{ role }}
+		{% endfor %}.
+		<br/>
+		Your account is
+		{% if user.isVerified %}
+			enabled
+		{% else %}
+			disabled
+		{% endif %}.
+		<br/>
+		Your token expires at
+		{{ expires|date('Y-m-d H:i:s') }}.
+		<br/>
+	</p>
+
+	<a href="{{ path('app_logout') }}">Logout</a>
+
+{% endblock %}

@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+	<form action="{{ path('app_login_link') }}" method="POST">
+		<label for="inputEmail">Email</label>
+		<input type="email" name="email">
+
+		<input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
+
+		<button type="submit">Send Login Link</button>
+	</form>
+{% endblock %}

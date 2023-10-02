@@ -1,0 +1,9 @@
+framework:
+    mailer:
+        dsn: '%env(MAILER_DSN)%'
+        envelope:
+            sender: 'fabien@example.com'
+        headers:
+            from: 'Daemon <daemon@iamseb.dev>'
+            reply_to: 'seb@iamseb.dev'
+            X-Custom-Header: 'My custom header'

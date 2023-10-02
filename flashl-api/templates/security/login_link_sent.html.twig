@@ -1,0 +1,18 @@
+{# We create a template for the login_link_sent #}
+
+{% extends 'base.html.twig' %}
+
+{% block body %}
+	<h2>
+		Welcome
+		{{ user.email }}!
+	</h2>
+
+	<p>
+		We sent you an email with a link to login.This link will expire in 5 minutes.
+	</p>
+
+	<p>
+		<a href="{{ path('app_login') }}">Click here to login</a>
+	</p>
+{% endblock %}
