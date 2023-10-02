@@ -1,0 +1,15 @@
+###> root/ ###
+/.env.local
+/node_modules/
+###< /root/ ###
+
+
+###> /flash-api/ ###
+/flashl-api/.env.local
+/flashl-api/.env.local.php
+/flashl-api/.env.*.local
+/flashl-api/config/secrets/prod/prod.decrypt.private.php
+/flashl-api/public/bundles/
+/flashl-api/var/
+/flashl-api/vendor/
+###< /flash-api/ ###
